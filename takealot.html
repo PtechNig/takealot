@@ -18,9 +18,10 @@
     font-size: 0.9rem;
 }
 
-img{
+ img{
     width: 100%;
 }
+
 
 .list-group button{
     padding: 5px 10px;
@@ -43,6 +44,97 @@ img{
     text-decoration: underline;
 }
 
+.myCard{
+            display: flex;
+            gap: 15px;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+
+        .card{
+            flex-basis: 25%;
+        }
+
+        .footer a{
+            text-decoration: none;
+            color: black;
+            transition: 0.5s;
+        }
+
+        .footer a:hover{
+            text-decoration: underline;
+            color: blue;
+        }
+
+        .show{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .icon{
+            display: flex;
+            flex-direction: column;
+            gap:10px
+        }
+
+        .icon img{
+            width: 100%;
+        }
+
+        @media  (max-width: 700px) {
+            .footer-container{
+                position: relative;
+            }
+            .hide {
+                visibility: hidden;
+            }
+
+            .show{
+                position: absolute;
+            }
+
+            .icon{
+                flex-direction: column;
+            }
+        }
+
+        @media  (max-width: 1000px) {
+            .footer-container{
+                position: relative;
+            }
+            .hide {
+                visibility: hidden;
+            }
+
+            .show{
+                position: absolute;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                gap: 30px;
+                top: 100px;
+                width: 100%;
+                text-align: center;
+            }
+
+            .icon{
+                flex-direction: row;
+            }
+
+            .myCard{
+                flex-wrap: wrap;
+            }
+            .card {
+                flex-basis: 48%;
+            }
+
+            .list-group, .right{
+                display: none;
+            }
+            .myContainer{
+                width: 100%;
+            }
+          }
   </style>
 </head>
 
@@ -137,7 +229,7 @@ img{
 
       <!-- =========== Search =================== -->
 
-      <div class="col-9 ">
+      <div class="col-9 myContainer">
         <div>
           <nav class="navbar navbar-expand-lg">
             <form class="d-flex w-100" role="search">
@@ -194,7 +286,7 @@ img{
 
       <!-- ================ Banner Session=================== -->
         <div class="row pt-2">
-          <div class="col-9">
+          <div class="col-9 myContainer">
             <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
               <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="10000">
@@ -280,8 +372,9 @@ img{
 
           </div>
 
-          <div class="col-3">
+          <div class="col-3 right">
             <img src="../Images/banner-1.jpg" alt="">
+        
             <div class="row pt-2">
               <div class="col">
                 <img src="../Images/col-3.png" alt="">
@@ -294,11 +387,7 @@ img{
               </div>
             </div>
 
-            <div class="row pt-2">
-              <div class="col">
-                <img src="../Images/dra-6.jpg" alt="">
-              </div>
-            </div>
+ 
           </div>
         </div>
 
@@ -313,17 +402,17 @@ img{
 
   <div class="container pt-5">
     <div class="row">
-      <div class="col-9">
+      <div class="col-9 myContainer">
         <div class="d-flex justify-content-between">
           <a href="https://www.takealot.com/back-to-work " class="essential">Back to Work Essentials</a>
-          <a href="https://www.takealot.com/back-to-work" class="btn btn-dark">View more</a>
+          <a href="./backtowork.html" class="btn btn-dark">View more</a>
         </div>
 
 
         <div class="row mt-4">
           <div class="col">
             <div class="bg-light">
-              <div class="d-flex" style="gap: 15px;">
+              <div class="myCard">
 
                 <div class="card" style="width: 18rem;">
                   <img src="./Images/box-1.jpg" class="card-img-top" alt="...">
@@ -372,7 +461,7 @@ img{
         </div>
 
       </div>
-      <div class="col-3">
+      <div class="col-3 myContainer mt-4 mb-4">
         <div>
           <img src="./Images/right-1.png" alt="">
         </div>
@@ -394,17 +483,17 @@ img{
 
   <div class="container pt-5">
     <div class="row">
-      <div class="col-9">
+      <div class="col-9 myContainer">
         <div class="d-flex justify-content-between">
           <a href="https://www.takealot.com/back-to-work " class="essential">The Stanley Dupes</a>
-          <a href="https://www.takealot.com/back-to-work" class="btn btn-dark">View more</a>
+          <a href="./stanley.html" class="btn btn-dark">View more</a>
         </div>
 
 
         <div class="row mt-4">
           <div class="col">
             <div class="bg-light">
-              <div class="d-flex" style="gap: 15px;">
+              <div class="myCard">
 
                 <div class="card" style="width: 18rem;">
                   <img src="./Images/tum-5.jpg" class="card-img-top" alt="...">
@@ -453,7 +542,7 @@ img{
         </div>
 
       </div>
-      <div class="col-3">
+      <div class="col-3 myContainer mt-4 mb-4">
         <div>
           <img src="./Images/right-2.png" alt="">
         </div>
@@ -476,17 +565,17 @@ img{
 
   <div class="container pt-5">
     <div class="row">
-      <div class="col-9">
+      <div class="col-9 myContainer">
         <div class="d-flex justify-content-between">
           <a href="https://www.takealot.com/back-to-work " class="essential">New To Takealot: Pantry</a>
-          <a href="https://www.takealot.com/back-to-work" class="btn btn-dark">View more</a>
+          <a href="./pantry.html" class="btn btn-dark">View more</a>
         </div>
 
 
         <div class="row mt-4">
           <div class="col">
             <div class="bg-light">
-              <div class="d-flex" style="gap: 15px;">
+              <div class="myCard">
 
                 <div class="card" style="width: 18rem;">
                   <img src="./Images/tom-7.jpg" class="card-img-top" alt="...">
@@ -535,7 +624,7 @@ img{
         </div>
 
       </div>
-      <div class="col-3">
+      <div class="col-3 myContainer mt-4 mb-4">
         <div>
           <img src="./Images/right-3.png" alt="">
         </div>
@@ -557,17 +646,17 @@ img{
 
   <div class="container pt-5">
     <div class="row">
-      <div class="col-9">
+      <div class="col-9 myContainer">
         <div class="d-flex justify-content-between">
           <a href="https://www.takealot.com/back-to-work " class="essential">Back to School Clean</a>
-          <a href="https://www.takealot.com/back-to-work" class="btn btn-dark">View more</a>
+          <a href="./backtoschool.html" class="btn btn-dark">View more</a>
         </div>
 
 
         <div class="row mt-4">
           <div class="col">
             <div class="bg-light">
-              <div class="d-flex" style="gap: 15px;">
+              <div class="myCard">
 
                 <div class="card" style="width: 18rem;">
                   <img src="./Images/det-1.jpg" class="card-img-top" alt="...">
@@ -616,7 +705,7 @@ img{
         </div>
 
       </div>
-      <div class="col-3">
+      <div class="col-3 myContainer mt-4 mb-4">
         <div>
           <img src="./Images/right-4.png" alt="">
         </div>
@@ -632,23 +721,23 @@ img{
 
 
 <!-- ================= Business Section For Background =============== -->
-<div class="container-fluid  " style="background-color: rgb(238, 238, 238);">
+<div class="container-fluid " style="background-color: rgb(238, 238, 238);">
 
   <!-- =================Back to Business  ================= -->
 
   <div class="container pt-5">
     <div class="row">
-      <div class="col-9">
+      <div class="col-9 myContainer">
         <div class="d-flex justify-content-between">
           <a href="https://www.takealot.com/back-to-work " class="essential">Get Back to Business with Unilever Professional</a>
-          <a href="https://www.takealot.com/back-to-work" class="btn btn-dark">View more</a>
+          <a href="./backtobusiness.html" class="btn btn-dark">View more</a>
         </div>
 
 
         <div class="row mt-4">
           <div class="col">
             <div class="bg-light">
-              <div class="d-flex" style="gap: 15px;">
+              <div class="myCard">
 
                 <div class="card" style="width: 18rem;">
                   <img src="./Images/bus-2.jpg" class="card-img-top" alt="...">
@@ -697,7 +786,7 @@ img{
         </div>
 
       </div>
-      <div class="col-3 ">
+      <div class="col-3 myContainer mt-4 mb-4">
         <div >
           <img src="./Images/right-5.png" alt="">
         </div>
@@ -711,6 +800,82 @@ img{
   </div>
 </div>
 <!-- ================= Business Section End ================= -->
+
+
+    <!-- ==========Footer=============== -->
+    <div class="container-fluid bg-white p-5">
+      <div class="container d-flex justify-content-between footer-container">
+        <div class="d-flex flex-column footer hide">
+          <h5>Shop</h5>
+          <a href="#">Daily Deals</a>
+          <a href="#">App Only Deals</a>
+          <a href="#">Clearance Sale</a>
+          <a href="#">Gift Vouchers</a>
+          <div class="mt-5 d-flex flex-column">
+            <h5>Takealot.group</h5>
+            <a href="#">Superbalist.com</a>
+            <a href="#">Mr D</a>
+          </div>
+        </div>
+        <div class="d-flex flex-column footer hide">
+          <h5>Help</h5>
+          <a href="#">Help Centre</a>
+          <a href="#">Contact Us</a>
+          <a href="#">Submit an Idea</a>
+          <a href="#">Suggest a Product</a>
+          <a href="#">Shipping & Delivery</a>
+          <a href="#">Takealot Pickup Points</a>
+          <a href="#">Returns</a>
+        </div>
+    
+        <div class="d-flex flex-column footer hide">
+          <h5>Account</h5>
+          <a href="#">My Account</a>
+          <a href="#">Track Order</a>
+          <a href="#">Returns</a>
+          <a href="#">Personal Details</a>
+          <a href="#">Invoice</a>
+        </div>
+    
+        <div class="d-flex flex-column footer hide">
+          <h5>Company</h5>
+          <a href="#">About Us</a>
+          <a href="#">Careers</a>
+          <a href="#">Sell on Takealot</a>
+          <a href="#">Deliver for Takealot</a>
+          <a href="#">Press & News</a>
+          <a href="#">Competitions</a>
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Human Rights Statement</a>
+          <a href="#">Speak Up Process</a>
+          <a href="#">Code of Advertising Practice</a>
+        </div>
+    
+        <div class=" footer show">
+          <div>
+            <h5>Download Our Apps</h5>
+            <div class="icon">
+              <img src="./Images/apple.svg" alt="">
+              <img src="./Images/playstore.svg" alt="">
+              <img src="./Images/gallary.svg" alt="">
+            </div>
+          </div>
+    
+          <div class="mt-5">
+            <h5>Follow Us</h5>
+            <i class="fa-brands fa-facebook me-3" style="color: blue;"></i>
+            <i class="fa-brands fa-x-twitter me-3" style="color: blue;"></i>
+            <i class="fa-brands fa-square-instagram" style="color: blue;"></i>
+          </div>
+        </div>
+    
+      </div>
+    </div>
+    <div class="container-fluid bg-primary pt-5 pb-5"
+      style="text-align: center; color: rgb(242, 242, 250); font-size: 1.2rem;">
+      &copy; Takealot Online (Pty) Ltd.
+    </div>
 
 
     <script src="../bootstrap-5.2.3-dist/js/bootstrap.bundle.js"></script>
